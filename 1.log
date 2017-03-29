@@ -1,0 +1,92 @@
+Script started on Saturday 25 March 2017 10:24:17 AM IST
+Author: Gaurav Singh
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ls
+1.log  ovm.c  ovm.c~  [0m[01;32movmhello[0m  ovmhello.c  ovmhello.c~  [01;32mvt[0m  vt.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovm ovmm.c[1P.c[C[C[C
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 0 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 1 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 2 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 3 has invalid symbol index 2
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 4 has invalid symbol index 11
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 5 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 6 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 7 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 8 has invalid symbol index 12
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 9 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 10 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 11 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 12 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 13 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 14 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 15 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 16 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 17 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 18 has invalid symbol index 13
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_info): relocation 19 has invalid symbol index 21
+/usr/bin/ld: /usr/lib/debug/usr/lib/x86_64-linux-gnu/crt1.o(.debug_line): relocation 0 has invalid symbol index 2
+/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ 
+[K]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello ovmhello.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello
+vt Proto_vt 0x23510b8 parent 0x2351158 (Object_vt) size 4 tally 4
+    0 key 0x2351338 (#lookup) value 0x23515e8
+    1 key 0x2351378 (#add_method) value 0x2351608
+    2 key 0x23513c8 (#allocate) value 0x2351138
+    3 key 0x2351458 (#delegate) value 0x2351118
+obj Proto 0x2351628 vt Proto_vt 0x23510b8
+vt Object_vt 0x2351158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x2351648 vt Object_vt 0x2351158
+vt Symbol_vt 0x23511f8 parent 0x2351158 (Object_vt) size 4 tally 3
+    0 key 0x2351488 (#new:) value 0x2351688
+    1 key 0x2351568 (#print) value 0x23516a8
+    2 key 0x23515a8 (#length) value 0x2351278
+obj Symbol 0x2351668 vt Symbol_vt 0x23511f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./vt
+sizeof int     = 4
+sizeof pointer = 8
+sizeof object  = 0
+sizeof vtable  = 40
+sizeof symbol  = 8
+alloc (nil) size  40 = mem 0x200c010 oop 0x200c018
+alloc (nil) size  40 = mem 0x200c0b0 oop 0x200c0b8
+alloc (nil) size  40 = mem 0x200c150 oop 0x200c158
+alloc 0x200c0b8 size  40 = mem 0x200c1f0 oop 0x200c1f8
+alloc 0x200c0b8 size   0 = mem 0x200c290 oop 0x200c298
+alloc 0x200c158 size   0 = mem 0x200c2b0 oop 0x200c2b8
+alloc 0x200c1f8 size   0 = mem 0x200c2d0 oop 0x200c2d8
+alloc 0x200c018 size  15 = mem 0x200c2f0 oop 0x200c2f8
+alloc 0x200c018 size  18 = mem 0x200c310 oop 0x200c318
+alloc 0x200c018 size  14 = mem 0x200c340 oop 0x200c348
+alloc 0x200c018 size  13 = mem 0x200c090 oop 0x200c098
+vt      atom 0x200c018 vt (nil) -> (nil)
+vt     proto 0x200c0b8 vt 0x200c0b8 -> 0x200c158
+vt    object 0x200c158 vt 0x200c0b8 -> (nil)
+vt    symbol 0x200c1f8 vt 0x200c0b8 -> 0x200c158
+Proto  0x200c298 vt 0x200c0b8 -> 0x200c158
+Object 0x200c2b8 vt 0x200c158 -> (nil)
+Symbol 0x200c2d8 vt 0x200c1f8 -> 0x200c158
+Direct invocation of new: and print
+alloc 0x200c1f8 size   8 = mem 0x200c070 oop 0x200c078
+Machine Foo is ready
+Testing keyword new: operator
+alloc 0x200c1f8 size   8 = mem 0x200c3e0 oop 0x200c3e8
+symbol oop    0x200c3e8
+symbol vt     0x200c1f8
+symbol string 0x200c400
+Testing unary print operator
+Machine Foo is ready
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ^C
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ exit
+exit
+
+Script done on Saturday 25 March 2017 10:28:08 AM IST

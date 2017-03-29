@@ -1,0 +1,480 @@
+Script started on Wednesday 29 March 2017 11:54:16 AM IST
+Author: Gaurav Singh
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ exit./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.cexit[K./ovmhello1
+vt Proto_vt 0x13cf0b8 parent 0x13cf158 (Object_vt) size 4 tally 4
+    0 key 0x13cf338 (#lookup) value 0x13cf5e8
+    1 key 0x13cf378 (#add_method) value 0x13cf608
+    2 key 0x13cf3c8 (#allocate) value 0x13cf138
+    3 key 0x13cf458 (#delegate) value 0x13cf118
+obj Proto 0x13cf628 vt Proto_vt 0x13cf0b8
+vt Object_vt 0x13cf158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x13cf648 vt Object_vt 0x13cf158
+vt Symbol_vt 0x13cf1f8 parent 0x13cf158 (Object_vt) size 4 tally 3
+    0 key 0x13cf488 (#new:) value 0x13cf688
+    1 key 0x13cf568 (#print) value 0x13cf6a8
+    2 key 0x13cf5a8 (#length) value 0x13cf278
+obj Symbol 0x13cf668 vt Symbol_vt 0x13cf1f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+unknown selector (nil) (#(nil)) vt Object_vt 0x13cf158 parent (nil) ((nil)_vt) size 2 tally 0
+Size of Object 0
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+In file included from ovmhello1.c:1:0:
+ovmhello1.c: In function ‘main’:
+ovmhello1.c:148:21: error: ‘object’ undeclared (first use in this function)
+  int len=oop2i(send(object, s_sizeInMemory));
+                     ^
+ovm1.c:16:34: note: in definition of macro ‘oop2i’
+ #define oop2i(o) ((int)((char *)(o) - (char *)0))
+                                  ^
+ovmhello1.c:148:16: note: in expansion of macro ‘send’
+  int len=oop2i(send(object, s_sizeInMemory));
+                ^
+ovmhello1.c:148:21: note: each undeclared identifier is reported only once for each function it appears in
+  int len=oop2i(send(object, s_sizeInMemory));
+                     ^
+ovm1.c:16:34: note: in definition of macro ‘oop2i’
+ #define oop2i(o) ((int)((char *)(o) - (char *)0))
+                                  ^
+ovmhello1.c:148:16: note: in expansion of macro ‘send’
+  int len=oop2i(send(object, s_sizeInMemory));
+                ^
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+In file included from ovmhello1.c:1:0:
+ovmhello1.c: In function ‘main’:
+ovmhello1.c:148:21: error: ‘object_vt’ undeclared (first use in this function)
+  int len=oop2i(send(object_vt, s_sizeInMemory));
+                     ^
+ovm1.c:16:34: note: in definition of macro ‘oop2i’
+ #define oop2i(o) ((int)((char *)(o) - (char *)0))
+                                  ^
+ovmhello1.c:148:16: note: in expansion of macro ‘send’
+  int len=oop2i(send(object_vt, s_sizeInMemory));
+                ^
+ovmhello1.c:148:21: note: each undeclared identifier is reported only once for each function it appears in
+  int len=oop2i(send(object_vt, s_sizeInMemory));
+                     ^
+ovm1.c:16:34: note: in definition of macro ‘oop2i’
+ #define oop2i(o) ((int)((char *)(o) - (char *)0))
+                                  ^
+ovmhello1.c:148:16: note: in expansion of macro ‘send’
+  int len=oop2i(send(object_vt, s_sizeInMemory));
+                ^
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c
+In file included from ovmhello1.c:1:0:
+ovmhello1.c: In function ‘main’:
+ovmhello1.c:148:21: error: ‘closure’ undeclared (first use in this function)
+  int len=oop2i(send(closure, s_sizeInMemory));
+                     ^
+ovm1.c:16:34: note: in definition of macro ‘oop2i’
+ #define oop2i(o) ((int)((char *)(o) - (char *)0))
+                                  ^
+ovmhello1.c:148:16: note: in expansion of macro ‘send’
+  int len=oop2i(send(closure, s_sizeInMemory));
+                ^
+ovmhello1.c:148:21: note: each undeclared identifier is reported only once for each function it appears in
+  int len=oop2i(send(closure, s_sizeInMemory));
+                     ^
+ovm1.c:16:34: note: in definition of macro ‘oop2i’
+ #define oop2i(o) ((int)((char *)(o) - (char *)0))
+                                  ^
+ovmhello1.c:148:16: note: in expansion of macro ‘send’
+  int len=oop2i(send(closure, s_sizeInMemory));
+                ^
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0xadb0b8 parent 0xadb158 (Object_vt) size 4 tally 4
+    0 key 0xadb338 (#lookup) value 0xadb5e8
+    1 key 0xadb378 (#add_method) value 0xadb608
+    2 key 0xadb3c8 (#allocate) value 0xadb138
+    3 key 0xadb458 (#delegate) value 0xadb118
+obj Proto 0xadb628 vt Proto_vt 0xadb0b8
+vt Object_vt 0xadb158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0xadb648 vt Object_vt 0xadb158
+vt Symbol_vt 0xadb1f8 parent 0xadb158 (Object_vt) size 4 tally 3
+    0 key 0xadb488 (#new:) value 0xadb688
+    1 key 0xadb568 (#print) value 0xadb6a8
+    2 key 0xadb5a8 (#length) value 0xadb278
+obj Symbol 0xadb668 vt Symbol_vt 0xadb1f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+unknown selector (nil) (#(nil)) vt Object_vt 0xadb158 parent (nil) ((nil)_vt) size 2 tally 0
+Size of Object 0
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0xbf90b8 parent 0xbf9158 (Object_vt) size 4 tally 4
+    0 key 0xbf9338 (#lookup) value 0xbf9608
+    1 key 0xbf9378 (#add_method) value 0xbf9628
+    2 key 0xbf93c8 (#allocate) value 0xbf9138
+    3 key 0xbf9458 (#delegate) value 0xbf9118
+obj Proto 0xbf9678 vt Proto_vt 0xbf90b8
+vt Object_vt 0xbf9158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0xbf9698 vt Object_vt 0xbf9158
+vt Symbol_vt 0xbf91f8 parent 0xbf9158 (Object_vt) size 4 tally 3
+    0 key 0xbf9488 (#new:) value 0xbf96d8
+    1 key 0xbf9568 (#print) value 0xbf96f8
+    2 key 0xbf95a8 (#length) value 0xbf9278
+obj Symbol 0xbf96b8 vt Symbol_vt 0xbf91f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+unknown selector 0xbf9428 (#sizeInMemory) vt Object_vt 0xbf9158 parent (nil) ((nil)_vt) size 2 tally 0
+Size of Object 0
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ dbm ./ovmhello1
+No command 'dbm' found, did you mean:
+ Command 'cbm' from package 'cbm' (universe)
+ Command 'dwm' from package 'dwm' (universe)
+ Command 'dbd' from package 'netatalk' (universe)
+ Command 'dba' from package 'wise' (universe)
+ Command 'dpm' from package 'dpm-server-postgres' (universe)
+ Command 'dpm' from package 'dpm-server-mysql' (universe)
+dbm: command not found
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gdb ./ovmhello1
+GNU gdb (Ubuntu 7.7.1-0ubuntu5~14.04.2) 7.7.1
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./ovmhello1...done.
+(gdb) Quit
+(gdb) exit
+Undefined command: "exit".  Try "help".
+(gdb) quit
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ cd../
+bash: cd../: No such file or directory
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ../
+bash: ../: Is a directory
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ cd
+]0;gps@gps-Inspiron-5559: ~gps@gps-Inspiron-5559:~$ cd Documents/
+]0;gps@gps-Inspiron-5559: ~/Documentsgps@gps-Inspiron-5559:~/Documents$ gcc -g -o ovmhello.c [K[K[K ovmhello.c 
+]0;gps@gps-Inspiron-5559: ~/Documentsgps@gps-Inspiron-5559:~/Documents$ ./ovmhello 
+vt Proto_vt 0x6880b8 parent 0x688158 (Object_vt) size 4 tally 4
+    0 key 0x688338 (#lookup) value 0x688618
+    1 key 0x688388 (#add_method) value 0x688638
+    2 key 0x6883d8 (#allocate) value 0x688138
+    3 key 0x688468 (#delegate) value 0x688118
+obj Proto 0x6886b8 vt Proto_vt 0x6880b8
+vt Object_vt 0x688158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x6885c8 (#sizeInMemory) value 0x688718
+obj Object 0x6886d8 vt Object_vt 0x688158
+vt Symbol_vt 0x6881f8 parent 0x688158 (Object_vt) size 4 tally 3
+    0 key 0x688498 (#new:) value 0x688738
+    1 key 0x688438 (#print) value 0x688758
+    2 key 0x688408 (#length) value 0x688278
+obj Symbol 0x6886f8 vt Symbol_vt 0x6881f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+helloworld
+helloworldSize of Proto 8
+Size of struct Closure_vt 48
+(h length + w length) = (h append: w) length. True
+Size of h=21, Size of w=21 ,Size after append=26
+(h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory. False
+]0;gps@gps-Inspiron-5559: ~/Documentsgps@gps-Inspiron-5559:~/Documents$ ./ovmhello [19@gcc -g -o ovmhello ovmhello.c[C
+]0;gps@gps-Inspiron-5559: ~/Documentsgps@gps-Inspiron-5559:~/Documents$ gcc -g -o ovmhello ovmhello.c [19P./ovmhello[C
+vt Proto_vt 0x83e0b8 parent 0x83e158 (Object_vt) size 4 tally 4
+    0 key 0x83e338 (#lookup) value 0x83e618
+    1 key 0x83e388 (#add_method) value 0x83e638
+    2 key 0x83e3d8 (#allocate) value 0x83e138
+    3 key 0x83e468 (#delegate) value 0x83e118
+obj Proto 0x83e6b8 vt Proto_vt 0x83e0b8
+vt Object_vt 0x83e158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x83e5c8 (#sizeInMemory) value 0x83e718
+obj Object 0x83e6d8 vt Object_vt 0x83e158
+vt Symbol_vt 0x83e1f8 parent 0x83e158 (Object_vt) size 4 tally 3
+    0 key 0x83e498 (#new:) value 0x83e738
+    1 key 0x83e438 (#print) value 0x83e758
+    2 key 0x83e408 (#length) value 0x83e278
+obj Symbol 0x83e6f8 vt Symbol_vt 0x83e1f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+helloworld
+helloworldSize of Object 8
+Size of struct Closure_vt 48
+(h length + w length) = (h append: w) length. True
+Size of h=21, Size of w=21 ,Size after append=26
+(h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory. False
+]0;gps@gps-Inspiron-5559: ~/Documentsgps@gps-Inspiron-5559:~/Documents$ cd..Desk[K[K[K[K/Desktop
+bash: cd../Desktop: No such file or directory
+]0;gps@gps-Inspiron-5559: ~/Documentsgps@gps-Inspiron-5559:~/Documents$ cd
+]0;gps@gps-Inspiron-5559: ~gps@gps-Inspiron-5559:~$ cd Desktop
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ls
+1.log  2.log  3.log  ovm1.c  ovm1.c~  ovm.c~  [0m[01;32movmhello[0m  [01;32movmhello1[0m  ovmhello1.c  ovmhello1.c~  ovmhello.c~  [01;32mvt[0m  vt1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ lscd Desktop[K../Desktop[1P./ovmhello [19@gcc -g -o ovmhello ovmhello.c[C[19P./ovmhello[C[19@gcc -g -o ovmhello ovmhello.c[C[17Pcd Documents/[K../cd../gdb ./ovmhello1dbm[C[C[C[C[C[C[C[C[C[C[C[C[4P./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.cls[Kcd Desktop[K../Desktop[1P./ovmhello [19@gcc -g -o ovmhello ovmhello.c[C[19P./ovmhello[C[K1
+vt Proto_vt 0x10970b8 parent 0x1097158 (Object_vt) size 4 tally 4
+    0 key 0x1097338 (#lookup) value 0x1097608
+    1 key 0x1097378 (#add_method) value 0x1097628
+    2 key 0x10973c8 (#allocate) value 0x1097138
+    3 key 0x1097458 (#delegate) value 0x1097118
+obj Proto 0x1097678 vt Proto_vt 0x10970b8
+vt Object_vt 0x1097158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x1097698 vt Object_vt 0x1097158
+vt Symbol_vt 0x10971f8 parent 0x1097158 (Object_vt) size 4 tally 3
+    0 key 0x1097488 (#new:) value 0x10976d8
+    1 key 0x1097568 (#print) value 0x10976f8
+    2 key 0x10975a8 (#length) value 0x1097278
+obj Symbol 0x10976b8 vt Symbol_vt 0x10971f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+unknown selector 0x1097428 (#sizeInMemory) vt Object_vt 0x1097158 parent (nil) ((nil)_vt) size 2 tally 0
+Size of Object 0
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x117f0b8 parent 0x117f158 (Object_vt) size 4 tally 4
+    0 key 0x117f338 (#lookup) value 0x117f608
+    1 key 0x117f378 (#add_method) value 0x117f628
+    2 key 0x117f3c8 (#allocate) value 0x117f138
+    3 key 0x117f458 (#delegate) value 0x117f118
+obj Proto 0x117f678 vt Proto_vt 0x117f0b8
+vt Object_vt 0x117f158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x117f428 (#sizeInMemory) value 0x117f6d8
+obj Object 0x117f698 vt Object_vt 0x117f158
+vt Symbol_vt 0x117f1f8 parent 0x117f158 (Object_vt) size 4 tally 3
+    0 key 0x117f488 (#new:) value 0x117f6f8
+    1 key 0x117f568 (#print) value 0x117f718
+    2 key 0x117f5a8 (#length) value 0x117f278
+obj Symbol 0x117f6b8 vt Symbol_vt 0x117f1f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of Object 8
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x7e90b8 parent 0x7e9158 (Object_vt) size 4 tally 4
+    0 key 0x7e9338 (#lookup) value 0x7e9608
+    1 key 0x7e9378 (#add_method) value 0x7e9628
+    2 key 0x7e93c8 (#allocate) value 0x7e9138
+    3 key 0x7e9458 (#delegate) value 0x7e9118
+obj Proto 0x7e9678 vt Proto_vt 0x7e90b8
+vt Object_vt 0x7e9158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x7e9428 (#sizeInMemory) value 0x7e96d8
+obj Object 0x7e9698 vt Object_vt 0x7e9158
+vt Symbol_vt 0x7e91f8 parent 0x7e9158 (Object_vt) size 4 tally 3
+    0 key 0x7e9488 (#new:) value 0x7e96f8
+    1 key 0x7e9568 (#print) value 0x7e9718
+    2 key 0x7e95a8 (#length) value 0x7e9278
+obj Symbol 0x7e96b8 vt Symbol_vt 0x7e91f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of Object 8294800
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x14c20b8 parent 0x14c2158 (Object_vt) size 4 tally 4
+    0 key 0x14c2338 (#lookup) value 0x14c2608
+    1 key 0x14c2378 (#add_method) value 0x14c2628
+    2 key 0x14c23c8 (#allocate) value 0x14c2138
+    3 key 0x14c2458 (#delegate) value 0x14c2118
+obj Proto 0x14c2678 vt Proto_vt 0x14c20b8
+vt Object_vt 0x14c2158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x14c2428 (#sizeInMemory) value 0x14c26d8
+obj Object 0x14c2698 vt Object_vt 0x14c2158
+vt Symbol_vt 0x14c21f8 parent 0x14c2158 (Object_vt) size 4 tally 3
+    0 key 0x14c2488 (#new:) value 0x14c26f8
+    1 key 0x14c2568 (#print) value 0x14c2718
+    2 key 0x14c25a8 (#length) value 0x14c2278
+obj Symbol 0x14c26b8 vt Symbol_vt 0x14c21f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of Object_vt 21766544
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0xa2a0b8 parent 0xa2a158 (Object_vt) size 4 tally 4
+    0 key 0xa2a338 (#lookup) value 0xa2a608
+    1 key 0xa2a378 (#add_method) value 0xa2a628
+    2 key 0xa2a3c8 (#allocate) value 0xa2a138
+    3 key 0xa2a458 (#delegate) value 0xa2a118
+obj Proto 0xa2a678 vt Proto_vt 0xa2a0b8
+vt Object_vt 0xa2a158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0xa2a428 (#sizeInMemory) value 0xa2a6d8
+obj Object 0xa2a698 vt Object_vt 0xa2a158
+vt Symbol_vt 0xa2a1f8 parent 0xa2a158 (Object_vt) size 4 tally 3
+    0 key 0xa2a488 (#new:) value 0xa2a6f8
+    1 key 0xa2a568 (#print) value 0xa2a718
+    2 key 0xa2a5a8 (#length) value 0xa2a278
+obj Symbol 0xa2a6b8 vt Symbol_vt 0xa2a1f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of String 8
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x10c60b8 parent 0x10c6158 (Object_vt) size 4 tally 4
+    0 key 0x10c6338 (#lookup) value 0x10c6608
+    1 key 0x10c6378 (#add_method) value 0x10c6628
+    2 key 0x10c63c8 (#allocate) value 0x10c6138
+    3 key 0x10c6458 (#delegate) value 0x10c6118
+obj Proto 0x10c6678 vt Proto_vt 0x10c60b8
+vt Object_vt 0x10c6158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x10c6428 (#sizeInMemory) value 0x10c66d8
+obj Object 0x10c6698 vt Object_vt 0x10c6158
+vt Symbol_vt 0x10c61f8 parent 0x10c6158 (Object_vt) size 4 tally 3
+    0 key 0x10c6488 (#new:) value 0x10c66f8
+    1 key 0x10c6568 (#print) value 0x10c6718
+    2 key 0x10c65a8 (#length) value 0x10c6278
+obj Symbol 0x10c66b8 vt Symbol_vt 0x10c61f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of Proto 8
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x6c50b8 parent 0x6c5158 (Object_vt) size 4 tally 4
+    0 key 0x6c5338 (#lookup) value 0x6c5608
+    1 key 0x6c5378 (#add_method) value 0x6c5628
+    2 key 0x6c53c8 (#allocate) value 0x6c5138
+    3 key 0x6c5458 (#delegate) value 0x6c5118
+obj Proto 0x6c5678 vt Proto_vt 0x6c50b8
+vt Object_vt 0x6c5158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0x6c5428 (#sizeInMemory) value 0x6c56d8
+obj Object 0x6c5698 vt Object_vt 0x6c5158
+vt Symbol_vt 0x6c51f8 parent 0x6c5158 (Object_vt) size 4 tally 3
+    0 key 0x6c5488 (#new:) value 0x6c56f8
+    1 key 0x6c5568 (#print) value 0x6c5718
+    2 key 0x6c55a8 (#length) value 0x6c5278
+obj Symbol 0x6c56b8 vt Symbol_vt 0x6c51f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of h 5
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0xc850b8 parent 0xc85158 (Object_vt) size 4 tally 4
+    0 key 0xc85338 (#lookup) value 0xc85608
+    1 key 0xc85378 (#add_method) value 0xc85628
+    2 key 0xc853c8 (#allocate) value 0xc85138
+    3 key 0xc85458 (#delegate) value 0xc85118
+obj Proto 0xc85678 vt Proto_vt 0xc850b8
+vt Object_vt 0xc85158 parent (nil) ((nil)_vt) size 2 tally 1
+    0 key 0xc85428 (#sizeInMemory) value 0xc856d8
+obj Object 0xc85698 vt Object_vt 0xc85158
+vt Symbol_vt 0xc851f8 parent 0xc85158 (Object_vt) size 4 tally 3
+    0 key 0xc85488 (#new:) value 0xc856f8
+    1 key 0xc85568 (#print) value 0xc85718
+    2 key 0xc855a8 (#length) value 0xc85278
+obj Symbol 0xc856b8 vt Symbol_vt 0xc851f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+Size of String_vt 13130128
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ exit
+exit
+
+Script done on Wednesday 29 March 2017 12:45:05 PM IST

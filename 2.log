@@ -1,0 +1,217 @@
+Script started on Saturday 25 March 2017 10:55:02 AM IST
+Author: Gaurav Singh
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ f[Kgcc -g -i[Ko ovmhello1 ovmhello1
+ovmhello1: file not recognized: File truncated
+collect2: error: ld returned 1 exit status
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1
+vt Proto_vt 0xbe80b8 parent 0xbe8158 (Object_vt) size 4 tally 4
+    0 key 0xbe8338 (#lookup) value 0xbe85e8
+    1 key 0xbe8378 (#add_method) value 0xbe8608
+    2 key 0xbe83c8 (#allocate) value 0xbe8138
+    3 key 0xbe8458 (#delegate) value 0xbe8118
+obj Proto 0xbe8628 vt Proto_vt 0xbe80b8
+vt Object_vt 0xbe8158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0xbe8648 vt Object_vt 0xbe8158
+vt Symbol_vt 0xbe81f8 parent 0xbe8158 (Object_vt) size 4 tally 3
+    0 key 0xbe8488 (#new:) value 0xbe8688
+    1 key 0xbe8568 (#print) value 0xbe86a8
+    2 key 0xbe85a8 (#length) value 0xbe8278
+obj Symbol 0xbe8668 vt Symbol_vt 0xbe81f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+/n ############## /nhelloworld
+helloworld]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x17370b8 parent 0x1737158 (Object_vt) size 4 tally 4
+    0 key 0x1737338 (#lookup) value 0x17375e8
+    1 key 0x1737378 (#add_method) value 0x1737608
+    2 key 0x17373c8 (#allocate) value 0x1737138
+    3 key 0x1737458 (#delegate) value 0x1737118
+obj Proto 0x1737628 vt Proto_vt 0x17370b8
+vt Object_vt 0x1737158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x1737648 vt Object_vt 0x1737158
+vt Symbol_vt 0x17371f8 parent 0x1737158 (Object_vt) size 4 tally 3
+    0 key 0x1737488 (#new:) value 0x1737688
+    1 key 0x1737568 (#print) value 0x17376a8
+    2 key 0x17375a8 (#length) value 0x1737278
+obj Symbol 0x1737668 vt Symbol_vt 0x17371f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+ ############## 
+helloworld
+helloworld]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x7b30b8 parent 0x7b3158 (Object_vt) size 4 tally 4
+    0 key 0x7b3338 (#lookup) value 0x7b35e8
+    1 key 0x7b3378 (#add_method) value 0x7b3608
+    2 key 0x7b33c8 (#allocate) value 0x7b3138
+    3 key 0x7b3458 (#delegate) value 0x7b3118
+obj Proto 0x7b3628 vt Proto_vt 0x7b30b8
+vt Object_vt 0x7b3158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x7b3648 vt Object_vt 0x7b3158
+vt Symbol_vt 0x7b31f8 parent 0x7b3158 (Object_vt) size 4 tally 3
+    0 key 0x7b3488 (#new:) value 0x7b3688
+    1 key 0x7b3568 (#print) value 0x7b36a8
+    2 key 0x7b35a8 (#length) value 0x7b3278
+obj Symbol 0x7b3668 vt Symbol_vt 0x7b31f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+ ############## 
+helloworld
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x1f910b8 parent 0x1f91158 (Object_vt) size 4 tally 4
+    0 key 0x1f91338 (#lookup) value 0x1f915e8
+    1 key 0x1f91378 (#add_method) value 0x1f91608
+    2 key 0x1f913c8 (#allocate) value 0x1f91138
+    3 key 0x1f91458 (#delegate) value 0x1f91118
+obj Proto 0x1f91628 vt Proto_vt 0x1f910b8
+vt Object_vt 0x1f91158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x1f91648 vt Object_vt 0x1f91158
+vt Symbol_vt 0x1f911f8 parent 0x1f91158 (Object_vt) size 4 tally 3
+    0 key 0x1f91488 (#new:) value 0x1f91688
+    1 key 0x1f91568 (#print) value 0x1f916a8
+    2 key 0x1f915a8 (#length) value 0x1f91278
+obj Symbol 0x1f91668 vt Symbol_vt 0x1f911f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+ ############## 
+hello 
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x16010b8 parent 0x1601158 (Object_vt) size 4 tally 4
+    0 key 0x1601338 (#lookup) value 0x16015e8
+    1 key 0x1601378 (#add_method) value 0x1601608
+    2 key 0x16013c8 (#allocate) value 0x1601138
+    3 key 0x1601458 (#delegate) value 0x1601118
+obj Proto 0x1601628 vt Proto_vt 0x16010b8
+vt Object_vt 0x1601158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x1601648 vt Object_vt 0x1601158
+vt Symbol_vt 0x16011f8 parent 0x1601158 (Object_vt) size 4 tally 3
+    0 key 0x1601488 (#new:) value 0x1601688
+    1 key 0x1601568 (#print) value 0x16016a8
+    2 key 0x16015a8 (#length) value 0x1601278
+obj Symbol 0x1601668 vt Symbol_vt 0x16011f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+ ############## 
+helloworld
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0x19b70b8 parent 0x19b7158 (Object_vt) size 4 tally 4
+    0 key 0x19b7338 (#lookup) value 0x19b75e8
+    1 key 0x19b7378 (#add_method) value 0x19b7608
+    2 key 0x19b73c8 (#allocate) value 0x19b7138
+    3 key 0x19b7458 (#delegate) value 0x19b7118
+obj Proto 0x19b7628 vt Proto_vt 0x19b70b8
+vt Object_vt 0x19b7158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0x19b7648 vt Object_vt 0x19b7158
+vt Symbol_vt 0x19b71f8 parent 0x19b7158 (Object_vt) size 4 tally 3
+    0 key 0x19b7488 (#new:) value 0x19b7688
+    1 key 0x19b7568 (#print) value 0x19b76a8
+    2 key 0x19b75a8 (#length) value 0x19b7278
+obj Symbol 0x19b7668 vt Symbol_vt 0x19b71f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+ ############## 
+hello 
+world
+
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0xca70b8 parent 0xca7158 (Object_vt) size 4 tally 4
+    0 key 0xca7338 (#lookup) value 0xca75e8
+    1 key 0xca7378 (#add_method) value 0xca7608
+    2 key 0xca73c8 (#allocate) value 0xca7138
+    3 key 0xca7458 (#delegate) value 0xca7118
+obj Proto 0xca7628 vt Proto_vt 0xca70b8
+vt Object_vt 0xca7158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0xca7648 vt Object_vt 0xca7158
+vt Symbol_vt 0xca71f8 parent 0xca7158 (Object_vt) size 4 tally 3
+    0 key 0xca7488 (#new:) value 0xca7688
+    1 key 0xca7568 (#print) value 0xca76a8
+    2 key 0xca75a8 (#length) value 0xca7278
+obj Symbol 0xca7668 vt Symbol_vt 0xca71f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+ ############## 
+hello world
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ ./ovmhello1gcc -g -o ovmhello1 ovmhello1.c
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ gcc -g -o ovmhello1 ovmhello1.c[20P./ovmhello1
+vt Proto_vt 0xd370b8 parent 0xd37158 (Object_vt) size 4 tally 4
+    0 key 0xd37338 (#lookup) value 0xd375e8
+    1 key 0xd37378 (#add_method) value 0xd37608
+    2 key 0xd373c8 (#allocate) value 0xd37138
+    3 key 0xd37458 (#delegate) value 0xd37118
+obj Proto 0xd37628 vt Proto_vt 0xd370b8
+vt Object_vt 0xd37158 parent (nil) ((nil)_vt) size 2 tally 0
+obj Object 0xd37648 vt Object_vt 0xd37158
+vt Symbol_vt 0xd371f8 parent 0xd37158 (Object_vt) size 4 tally 3
+    0 key 0xd37488 (#new:) value 0xd37688
+    1 key 0xd37568 (#print) value 0xd376a8
+    2 key 0xd375a8 (#length) value 0xd37278
+obj Symbol 0xd37668 vt Symbol_vt 0xd371f8
+Object Machine ready
+Testing String
+Object Machine v1.0
+hello length 5
+hello world
+Testing Array
+array elements 4
+hello world
+
+#######################
+hello world
+]0;gps@gps-Inspiron-5559: ~/Desktopgps@gps-Inspiron-5559:~/Desktop$ exit
+exit
+
+Script done on Saturday 25 March 2017 11:13:01 AM IST
