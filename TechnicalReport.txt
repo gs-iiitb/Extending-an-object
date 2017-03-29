@@ -1,0 +1,52 @@
+The first thought that went through my mind was to include sizeInMemory in the vtable of all the objects but on going forward with this idea I encountered a problem that if we are given with new objects then we have to implement the same concept several times which would not be feasible.One more thought that went across was rather than putting method in every object`s vtable we can just put in the vt of object.And on futher note if we consider the sizeInMemory for String in this case we will be getting garbage value because String is an object but on looking into the vt of String object,and will have its name field as "String" and it will try to access the members of the struct mystring after typecasting but since String is of type struct object it will result in some garbage value. 
+Now on further thinking I thought of adding size field to every objects and then on allocating spaces for the objects we can invoke the size field to store that space as its parameter.
+But we had some minor issues with this method everytime size field was containing spaces of the structure but the length of the instances were not accounted,therefore,with some accounting of the lengths these issues were entertained.
+When I went on to discuss with some of our classmates for this method then I found out that my approach wasn`t correct.Therefore with some changes I made a new file producing the correct outputs.In this approach rather than giving size field to every object and then giving the values of allocated sizes to it,we kept the pointer for storing the sizes into the _vt[-2] position as this position wasn`t accounted before and then storing the sizes to this pointer. 
+
+ 
+For append: we have created a new method in the file ovmhello.c which will be looked up when the append message is invoked.
+Looking up in the method,append is taken as an argument and returns the corresponding method implementation i.e.,concatinating two strings.
+In a string object we have created this method.The new structure has been given name s_append that can be used in other methods as well but the implementation of those method can be different.
+We have allocated some space for the string to be stored using malloc.
+Send() command is used to invoke a method to a particular object.As the format of send has (send(Receiver,Selector,Arguments...)) therefore it can be used to bind the append method to the String object using String as a receiver and s_append as message and the strings to be concatenated can be given as an arguments.
+_______________________________________________________________________________________________________________________________________________
+Result Analysis:-
+The results that we obtained are-
+Size in memory of Symbol is 0
+Explaination- Symbol is of type struct object *.
+
+Size in memory of Object is 0
+Explaination- Object is of type struct object *.
+
+Size in memory of Proto is 0
+Explaination- Proto is of type struct object *.
+
+Size in memory of String is 0
+Explaination- String is of type struct object *.
+
+Size in memory of Array is 0
+Explaination-Array is of type struct object *.
+
+Size in memory of w is 21
+Explaination- w is of type struct mystring * + w has length 5,therefore total size 21.
+
+Size in memory of String nl is 17
+Explaination- nl is of type struct mystring * + nl has length 1 of itself,therefore total size 17.
+
+Size in memory of Symbol s_at is 12
+Explaination-s_at is of type struct symbol *,therefore size 8 but additional 4 comes from the sym_alloc because the length of the string is 3 and therefore size_t sbytes gives 4.
+_______________________________________________________________________________________________________________________________________________
+For the second Question-
+(h length + w length) = (h append: w) length. "true".
+This statement stands true because the addition of length of given two strings and the concatenated string turns out to be equal.
+
+(h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory. "false".
+This statement answered false because if we consider individual strings then the size includes the string length and size of structure mystring,thus the size 21 and addition of sizes of two strings gives 42 as size.
+But in the case of concatenated string the size becomes string length and size of structure mystring which turns out to be 26,which is not true.
+We can rewrite the above statement to make it true:
+	h := String new: "hello".
+	w := String new: "world".
+	e := String new: "".
+	(h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory + e sizeInMemory. "True".
+As the empty string will not have its own length but will only contain the size of the mystring structure.Thus we can make the above statement to be true.
+

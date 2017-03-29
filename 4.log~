@@ -741,6 +741,9 @@ Size in memory of Array is 0
 Size in memory of h is 21
 Size in memory of String sp is 17
 Size in memory of Symbol s_at is 12
+Size in memory of Array line is 72
+sizeof(struct array)= 40
+sizeof(struct array)= 8
 ]0;gps@gps-Inspiron-5559: ~/Desktop/MOS (copy)gps@gps-Inspiron-5559:~/Desktop/MOS (copy)$ ./ovmhellogcc -g -o ovmhello ovmhello.c
 In file included from ovmhello.c:1:0:
 ovm.c: In function ‘vt_add_method’:
@@ -797,6 +800,9 @@ Size in memory of Array is 0
 Size in memory of h is 21
 Size in memory of String sp is 17
 Size in memory of Symbol s_at is 12
+Size in memory of Array line is 72
+sizeof(struct array)= 40
+sizeof(struct array)= 8
 ]0;gps@gps-Inspiron-5559: ~/Desktop/MOS (copy)gps@gps-Inspiron-5559:~/Desktop/MOS (copy)$ ./ovmhellogcc -g -o ovmhello ovmhello.c
 In file included from ovmhello.c:1:0:
 ovmhello.c: In function ‘main’:
@@ -859,6 +865,9 @@ Size in memory of Array is 0
 Size in memory of h is 21
 Size in memory of String sp is 17
 Size in memory of Symbol s_at is 12
+Size in memory of Array line is 72
+sizeof(struct array)= 40
+sizeof(struct array)= 8
 ]0;gps@gps-Inspiron-5559: ~/Desktop/MOS (copy)gps@gps-Inspiron-5559:~/Desktop/MOS (copy)$ ./ovmhellogcc -g -o ovmhello ovmhello.c
 ]0;gps@gps-Inspiron-5559: ~/Desktop/MOS (copy)gps@gps-Inspiron-5559:~/Desktop/MOS (copy)$ gcc -g -o ovmhello ovmhello.c[19P./ovmhello
 vt Proto_vt 0x14d60c0 parent 0x14d6160 (Object_vt) size 4 tally 4
@@ -902,6 +911,9 @@ Size in memory of Array is 0
 Size in memory of h is 21
 Size in memory of String sp is 17
 Size in memory of Symbol s_at is 12
+Size in memory of Array line is 72
+sizeof(struct array)= 40
+sizeof(struct array)= 8
 ]0;gps@gps-Inspiron-5559: ~/Desktop/MOS (copy)gps@gps-Inspiron-5559:~/Desktop/MOS (copy)$ exit
 exit
 

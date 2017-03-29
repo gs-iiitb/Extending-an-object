@@ -61,7 +61,6 @@ struct vtable {
 
 struct symbol {
 	_VTABLE_REF;
-	int size;
 	char     *string;
 };
 

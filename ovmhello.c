@@ -1,7 +1,7 @@
-#include "ovm1.c"
+#include "ovm.c"
 #include "string.h"
 // Begin String definitions
-struct mystring { _VTABLE_REF; int size; int length; char *chars; }; 
+struct mystring { _VTABLE_REF; int length; char *chars; }; 
 typedef struct mystring *HString;
 
 static struct vtable *String_vt;
@@ -11,10 +11,11 @@ static struct object *String;
 static struct object *String_newp(struct closure *cls, struct object *self, char *chars)
 {
 	HString clone = (HString)send(vtof(self), s_vtallocate, sizeof(struct mystring));
-
+	
 	clone->length = strlen(chars);
 	clone->chars  = strdup(chars);
-	((struct object *)clone)->size+=clone->length; //storing the size+no.of characters
+	int size=memof(clone)+clone->length;
+	oop_memoof(clone, size);
 	return (struct object *)clone;
 }
 
@@ -22,7 +23,7 @@ static struct object *String_newp(struct closure *cls, struct object *self, char
 static struct object *String_length(struct closure *cls, HString self) { return i2oop(self->length); }
 
 // String>>#print
-static struct object * String_print(struct closure * cls, HString self)
+static struct object *String_print(struct closure * cls, HString self)
 {
 	int i;
 
@@ -30,18 +31,19 @@ static struct object * String_print(struct closure * cls, HString self)
 		putchar(self->chars[i]);
 	return (struct object * )self;
 }
+
 // String>>#append
 static struct object *String_append(struct closure * cls, struct object * self, HString str1, HString str2)
 {
 
-	char *cop=malloc((str1->length+str2->length+1)*sizeof(char));
-	strcpy(cop,str1->chars);
-	strcat(cop,str2->chars);
-	printf("%s",cop);
-	struct object *clone=send(String,s_newp,cop);
-	free(cop);
+	char *res=malloc((str1->length+str2->length+1)*sizeof(char));
+	strcpy(res,str1->chars);
+	strcat(res,str2->chars);
+	struct object *clone=send(String,s_newp,res);
+	free(res);
 	return (struct object *)clone;
-}static struct symbol *s_append;
+}
+static struct symbol *s_append;
 
 // ------------------------ Begin Array definitions
 struct array { _VTABLE_REF; int length; struct object **contents; };
@@ -58,7 +60,8 @@ static struct object *Array_newp(struct closure *cls, struct object *self, int l
 	clone->length   = length;
 	clone->contents = (struct object **)calloc(clone->length, sizeof(struct object *));
 	assert(clone->contents);
-	((struct object *)clone)->size+=((clone->length)*sizeof(*(clone->contents)));
+	int size=memof(clone)+(clone->length)*sizeof(*(clone->contents));
+	oop_memoof(clone, size);
 	return (struct object *)clone;
 }
 
@@ -89,12 +92,10 @@ static struct symbol *s_atput;
 int main(int argc, char *argv[])
 {
 	init_ovm();
-	int i;
 
 	s_at    = (typeof(s_at))   send(Symbol, s_newp, "at:");
 	s_atput = (typeof(s_atput))send(Symbol, s_newp, "at:put:");
 	s_append = (typeof(s_append))send(Symbol, s_newp, "append:");
-
 
 	printf("Testing String\n");
 	String_vt = (typeof(String_vt))send(Object_vt, s_vtdelegate, "String");
@@ -137,53 +138,59 @@ int main(int argc, char *argv[])
 	printf("array elements %d\n", oop2i(send(line, s_length)));
 	send(line, s_atput, 1, h);
 	send(line, s_atput, 2, sp);
-	send(line, s_atput, 3, w); 
+	send(line, s_atput, 3, w);
 	send(line, s_atput, 4, nl);
+	int i;
 	for (i = 1; i <= 4; i++)
 		send(send(line, s_at, i), s_print);
-	printf("\n#######################\n");
-	struct object *jo=send(String, s_append, h, w);
-	//struct object *str3=send(String, s_append, h,sp,);
-	//send(String,s_append,h,w);
-	send(String, s_append,h,sp);
-	send(String,s_append,w,nl);
-	//int space=oop2i(send(send(String,s_append,h,sp), s_sizeInMemory));
-	printf("\n#######################\n");
-	int p;
-	p=oop2i(send(Symbol, s_sizeInMemory));
-	printf("Size in memory of Symbol is %d\n",p);
-	p=oop2i(send(Object, s_sizeInMemory));
-	printf("Size in memory of Object is %d\n",p);
-	p=oop2i(send(Proto, s_sizeInMemory));
-	printf("Size in memory of Proto is %d\n",p);
-	p=oop2i(send(String, s_sizeInMemory));
-	printf("Size in memory of String is %d\n",p);
-	p=oop2i(send(Array, s_sizeInMemory));
-	printf("Size in memory of Array is %d\n",p);
-	p=oop2i(send(w, s_sizeInMemory));
-	printf("Size in memory of w is %d\n",p);
-	p=oop2i(send(nl, s_sizeInMemory));
-	printf("Size in memory of String nl is %d\n",p);
-	p=oop2i(send(s_at, s_sizeInMemory));
-	printf("Size in memory of Symbol s_at is %d\n",p);
-	//long space=oop2i(send(Closure_vt, s_sizeInMemory));
-	//printf("Size of closure_vt %lu\n",space);
+	printf("\n");
 
-	int c1=oop2i(send(h, s_length));
-	int c2=oop2i(send(w, s_length));
-	int c3=oop2i(send(jo, s_length));
-	if(c1+c2==c3)
+	struct object *s3= send(String, s_append, h, sp); 		//appending hello and space
+	struct object *s4= send(String, s_append, w, nl); 		//appending world and new line
+	struct object *s5= send(String, s_append, s3, s4); 	//appending the two objects created above
+	struct object *s6= send(String, s_append, h, w); 		//appending hello and world
+	
+	send(s5, s_print); 						//printing hello world\n
+
+	int e=oop2i(send(h,s_length)); 	//getting length of hello
+	int f=oop2i(send(w,s_length)); 	//getting length of world
+	int g=oop2i(send(s6,s_length)); 	//getting length of helloworld
+	printf("\n###########################################\n");
+	if(e+f==g) 			//Testing for (h length + w length) = (h append: w) length.
 	printf("(h length + w length) = (h append: w) length. True\n");
 	else
 	printf("(h length + w length) = (h append: w) length. False\n");
 
-	int c4=oop2i(send(h, s_sizeInMemory));
-	int c5=oop2i(send(w, s_sizeInMemory));
-	int c6=oop2i(send(jo, s_sizeInMemory));
-	printf("size of h+w=%d and size of appended string=%d \n",(c4+c5),c6);
-	if(c4+c5==c6)
+	printf("\n###########################################\n");
+
+	int size1=oop2i(send(h, s_sizeInMemory));
+	int size2=oop2i(send(w, s_sizeInMemory));
+	int size3=oop2i(send(s6, s_sizeInMemory));
+
+	printf("Size of h=%d, Size of w=%d ,Size after append=%d\n",size1,size2,size3);
+
+	if(size1+size2==size3)			//Testing for (h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory.
 	printf("(h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory. True\n");
 	else
 	printf("(h sizeInMemory + w sizeInMemory) = (h append: w) sizeInMemory. False\n");
+	
+	printf("\n###########################################\n");
+
+	s1=oop2i(send(Symbol, s_sizeInMemory));
+	printf("Size in memory of Symbol is %d\n",s1);
+	s1=oop2i(send(Object, s_sizeInMemory));
+	printf("Size in memory of Object is %d\n",s1);
+	s1=oop2i(send(Proto, s_sizeInMemory));
+	printf("Size in memory of Proto is %d\n",s1);
+	s1=oop2i(send(String, s_sizeInMemory));
+	printf("Size in memory of String is %d\n",s1);
+	s1=oop2i(send(Array, s_sizeInMemory));
+	printf("Size in memory of Array is %d\n",s1);
+	s1=oop2i(send(h, s_sizeInMemory));
+	printf("Size in memory of h is %d\n",s1);
+	s1=oop2i(send(sp, s_sizeInMemory));
+	printf("Size in memory of String sp is %d\n",s1);
+	s1=oop2i(send(s_at, s_sizeInMemory));
+	printf("Size in memory of Symbol s_at is %d\n",s1);
 	return 0;
 }

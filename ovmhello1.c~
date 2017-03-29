@@ -149,7 +149,6 @@ int main(int argc, char *argv[])
 	send(String,s_append,w,nl);
 	//int space=oop2i(send(send(String,s_append,h,sp), s_sizeInMemory));
 	printf("\n#######################\n");
-	int p;
 	p=oop2i(send(Symbol, s_sizeInMemory));
 	printf("Size in memory of Symbol is %d\n",p);
 	p=oop2i(send(Object, s_sizeInMemory));
@@ -160,10 +159,10 @@ int main(int argc, char *argv[])
 	printf("Size in memory of String is %d\n",p);
 	p=oop2i(send(Array, s_sizeInMemory));
 	printf("Size in memory of Array is %d\n",p);
-	p=oop2i(send(w, s_sizeInMemory));
-	printf("Size in memory of w is %d\n",p);
-	p=oop2i(send(nl, s_sizeInMemory));
-	printf("Size in memory of String nl is %d\n",p);
+	p=oop2i(send(h, s_sizeInMemory));
+	printf("Size in memory of h is %d\n",p);
+	p=oop2i(send(sp, s_sizeInMemory));
+	printf("Size in memory of String sp is %d\n",p);
 	p=oop2i(send(s_at, s_sizeInMemory));
 	printf("Size in memory of Symbol s_at is %d\n",p);
 	//long space=oop2i(send(Closure_vt, s_sizeInMemory));
